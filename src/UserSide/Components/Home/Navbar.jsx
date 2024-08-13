@@ -24,6 +24,7 @@ import { cartAddData, getCart } from '../../../Redux/Cart/cart.actions'
 import { userLogout } from '../../../Redux/UserAuth/userAuth.actions'
 import Sidebar from './Sidebar'
 import { getWishlist } from '../../../Redux/Wishlist/wishlist.actions'
+
 const Navbar = () => {
   const dispatch = useDispatch()
   const userData = useSelector((store) => {
@@ -46,12 +47,13 @@ const Navbar = () => {
     dispatch(userLogout())
     dispatch(cartAddData([]))
   }
+  
   useEffect(() => {
     if (id) {
       dispatch(getCart(id))
       dispatch(getWishlist(id))
     }
-  }, [])
+  }, [dispatch, id])
 
   return (
     <Box
@@ -71,7 +73,7 @@ const Navbar = () => {
         <Link to='/'>
           <Box minW={'6rem'}>
             <Image
-              src='https://i.ibb.co/7jfCzLZ/Attirely-removebg-preview.png'
+              src='https://imgs.search.brave.com/TpezS77NJwwmump0_RK1zN0KWprPLt6oRq-kOqqNbPE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LW15bnRyYS0yNzA5/MTY4LTIyNDkxNTgu/cG5nP2Y9d2VicCZ3/PTEyOA'
               alt='logo'
               width='7rem'
               height={{ base: '3rem', md: '100%' }}
@@ -222,6 +224,11 @@ const Navbar = () => {
                 )}
               </Text>
             </Flex>
+          </Link>
+          <Link to='/virtual-tryon'>
+            <Button colorScheme='teal' size='sm'>
+              Virtual Try-On
+            </Button>
           </Link>
           <Box display={{ lg: 'none' }}>
             <Sidebar id={id} handleLogout={handleLogout} />

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" href="public\favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Virtual Try-On</title>
   <style>
@@ -46,6 +47,7 @@
 
     .image-box {
       display: flex;
+      height:auto ;
       flex-direction: column;
       align-items: center;
       background-color: #f1f8e9;
@@ -118,36 +120,35 @@
 <body>
     <div class="grid-container">
         <div class="grid-item" data-preprocessed-src="/src/output1.png">
-          <img src="\src\00054_00.jpg" alt="Image 1" />
+          <img src="\photos\00054_00.jpg" alt="Image 1" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output2.png">
-          <img src="\src\img13.jpg" alt="Image 2" />
+          <img src="\photos\img13.jpg" alt="Image 2" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output3.png">
-          <img src="\src\img2.jpg" alt="Image 3" />
+          <img src="\photos\img2.jpg" alt="Image 3" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output3.png">
-          <img src="\src\img4.jpg" alt="Image 3" />
+          <img src="\photos\img4.jpg" alt="Image 3" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output3.png">
-          <img src="\src\img6.jpg" alt="Image 3" />
+          <img src="\photos\img6.jpg" alt="Image 3" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output3.png">
-          <img src="\src\imp12.jpg" alt="Image 3" />
+          <img src="\photos\imp12.jpg" alt="Image 3" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output3.png">
-          <img src="\src\crop tops.jpg" alt="Image 3" />
+          <img src="\photos\crop tops.jpg" alt="Image 3" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output3.png">
-          <img src="\src\cloth_169.jpg" alt="Image 3" />
+          <img src="\photos\cloth_169.jpg" alt="Image 3" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output3.png">
-          <img src="\src\img1.jpg" alt="Image 3" />
+          <img src="\photos\img1.jpg" alt="Image 3" />
         </div>
         <div class="grid-item" data-preprocessed-src="/src/output3.png">
-          <img src="\src\img3.jpg" alt="Image 3" />
+          <img src="\photos\img3.jpg" alt="Image 3" />
         </div>
-        <!-- Add more grid items as needed -->
       </div>
   <div class="virtual-container">
     <h2>Virtual Try-On</h2>
@@ -174,8 +175,7 @@
       const processedImage = document.getElementById('processedImage');
       const processButton = document.getElementById('processButton');
 
-      // Set the path to your local image file here
-      const localProcessedImageSrc = '/src/output 2.png'; // Adjust the path as needed
+      const localProcessedImageSrc = "output 7.png"; 
 
       imageInput.addEventListener('change', (e) => {
         const file = e.target.files[0];
@@ -191,7 +191,6 @@
 
       processButton.addEventListener('click', () => {
         if (uploadedImage.src) {
-          // Use the imported local image as the processed image
           processedImage.src = localProcessedImageSrc;
           processedImageContainer.style.display = 'flex';
         }

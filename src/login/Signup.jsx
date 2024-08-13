@@ -131,7 +131,7 @@ const Signup = () => {
             display={{ base: "none", md: "Flex" }}
           >
             <Image
-              src={"https://i.ibb.co/7jfCzLZ/Attirely-removebg-preview.png"}
+              src={"https://imgs.search.brave.com/TpezS77NJwwmump0_RK1zN0KWprPLt6oRq-kOqqNbPE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbnNjb3V0LmNv/bS9pY29uL2ZyZWUv/cG5nLTI1Ni9mcmVl/LW15bnRyYS0yNzA5/MTY4LTIyNDkxNTgu/cG5nP2Y9d2VicCZ3/PTEyOA"}
               alt="myntra2"
             />
           </Flex>
